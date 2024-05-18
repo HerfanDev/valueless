@@ -2,8 +2,11 @@ from .ImageModule import Image
 import cv2
 
 class Canvas:
+    def f(self,strSrc : str):
+        self.redraw()
+
     def __init__(self,imagePath = str):
-        self.__ObjImage = Image(imagePath)
+        self.__ObjImage = Image(imagePath,self.f)
         self.redraw()
 
     @property
